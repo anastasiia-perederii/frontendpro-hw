@@ -4,4 +4,4 @@ let thirdNumber = +prompt('Enter your third number:');
 
 let averageNumber = (firstNumber + secondNumber + thirdNumber)/3;
 
-alert(`Your average number is ${averageNumber}`)
+alert(`Your average number is ${averageNumber}`);
