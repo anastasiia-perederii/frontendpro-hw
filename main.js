@@ -1,6 +1,6 @@
+let sign = prompt('Введіть операцію над числами: +, -, *, /');
 let firstNumber = +prompt('Введіть перше число:');
 let secondNumber = +prompt('Введіть друге число:');
-let sign = prompt('Введіть операцію над числами: +, -, *, /');
 
 // через switch...case
 switch (true) {
