@@ -1,13 +1,13 @@
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let removeElement = arr.findIndex(function(element){
-    return element === 5;
-});
-console.log(`Індекс заданного числа:`, removeElement);
-//Індекс заданного числа: 4
+function removeElement(arr, deleteNumb) {
+    let index = arr.indexOf(deleteNumb);
+        if (index !== -1) {
+            arr.splice(index, 1);
+        }
+}
 
-arr.splice(4,1);
+removeElement(arr,7);
+console.log(arr);
 
-console.log(`Результат:`, arr);
-//Результат: [1, 2, 3, 4, 6, 7]
