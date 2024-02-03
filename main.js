@@ -55,38 +55,29 @@ let users = [
     }
 ]
 
-
-
-
-function CheckOfRichest(users) {
+function checkOfRichest(users) {
     let richUsers = [];
 
-    for (let user of users) {
-        let correctBalance = +user.balance.replace('$', '').replace(',', '');
-        if (correctBalance > 2000) {
-            richUsers.push(user);
+    for (let key of users) {
+        if (+key.balance.replace('$', '').replace(',', '') > 2000) {
+            richUsers.push(key.phone);
         }
     }
-    return richUsers;
+   // return richUsers;
+    console.log(`Номери телефонів користувачів з балансом більше $2 000:`, richUsers);
 }
+checkOfRichest(users);
 
 function balanceSum(users) {
     let sum = 0;
 
-    for (let user of users) {
-        let correctBalance = +user.balance.replace('$', '').replace(',', '');
+    for (let key of users) {
+        let correctBalance = +key.balance.replace('$', '').replace(',', '');
         sum += correctBalance;
     }
     return sum;
 }
 
-
-let usersResult = CheckOfRichest(users);
-
-console.log('Користувачі з балансом більше ніж $2 000');
-for (user of usersResult) {
-    console.log(user['phone'], user['name']);
-}
-
-console.log(`Сума балансів усіх користувачів: $${Math.round(balanceSum(users))}`);
+totalSum = balanceSum(users);
+console.log(`Сума балансів усіх користувачів: $${Math.round(totalSum)}`);
 
