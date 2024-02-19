@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.center-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.shownImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    background: rgba(51, 51, 51, 0.47);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.controls:hover,
+.controls:focus {
+    background: rgba(238, 238, 238, 0.59);
+    color: #333;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 1;
+}
