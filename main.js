@@ -1,18 +1,18 @@
 const controls = document.querySelectorAll('.controls');
 const shownImage = document.querySelector('.shownImage');
-let currentSlide = 0;
-let images = ['1.png', '2.png', '3.png', '4.png', '5.png'];
+let currentSlide = 1;
 
 const loadSlide = () => {
-    shownImage.src = `./img/${images[currentSlide]}`;
+    shownImage.src = `./img/${currentSlide}.png`;
 };
 
 const goToSlide = (n) => {
-    currentSlide = (n + images.length) % images.length;
+    currentSlide = (n + 9) % 9 + 1;
     loadSlide();
-    document.getElementById('previous').style.display = (currentSlide === 0) ? 'none' : 'inline-block';
-    document.getElementById('next').style.display = (currentSlide === images.length - 1) ? 'none' : 'inline-block';
+    document.getElementById('previous').style.display = (currentSlide === 1) ? 'none' : 'inline-block';
+    document.getElementById('next').style.display = (currentSlide === 9) ? 'none' : 'inline-block';
 };
+
 controls.forEach(control => control
     .addEventListener('click', () =>
         goToSlide(currentSlide + (control.id === 'next' ? 1 : -1))));
