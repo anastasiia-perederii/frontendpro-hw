@@ -1,16 +1,16 @@
 const controls = document.querySelectorAll('.controls');
 const shownImage = document.querySelector('.shownImage');
-let currentSlide = 1;
+let currentSlide = 0;
 
 const loadSlide = () => {
-    shownImage.src = `./img/${currentSlide}.png`;
+    shownImage.src = `./img/${currentSlide + 1}.png`;
 };
 
 const goToSlide = (n) => {
-    currentSlide = (n + 9) % 9 + 1;
+    currentSlide = (n + 5) % 5;
     loadSlide();
-    document.getElementById('previous').style.display = (currentSlide === 1) ? 'none' : 'inline-block';
-    document.getElementById('next').style.display = (currentSlide === 9) ? 'none' : 'inline-block';
+    document.getElementById('previous').style.display = (currentSlide === 0) ? 'none' : 'inline-block';
+    document.getElementById('next').style.display = (currentSlide === 4) ? 'none' : 'inline-block';
 };
 
 controls.forEach(control => control
