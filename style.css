@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
+#categories {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    background-color: #d7d7d7;
+}
+
+#categories ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#categories li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#products {
+    float: left;
+    width: 50%;
+    height: 60%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#products li {
+    width: 32%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#products li:hover {
+    background-color: #f9f9f9;
+}
+
+#productInfo {
+    float: right;
+    width: 20%;
+}
+
+.buyButton {
+    display: none;
+    padding: 10px;
+    background-color: #65be6a;
+    color: white;
+    cursor: pointer;
+}
