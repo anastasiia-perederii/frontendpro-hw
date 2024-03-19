@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
+#categories {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    background-color: #d7d7d7;
+}
+
+#categories ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#categories li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#products {
+    float: left;
+    width: 50%;
+    height: 60%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#products li {
+    width: 32%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#products li:hover {
+    background-color: #f9f9f9;
+}
+
+#productInfo {
+    float: right;
+    width: 20%;
+}
+
+.buyButton {
+    display: none;
+    padding: 10px;
+    background-color: #65be6a;
+    color: white;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#orderForm {
+    display: block;
+    overflow: auto;
+}
+
+#orderForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#orderForm input[type="text"],
+#orderForm input[type="number"],
+#orderForm select,
+#orderForm textarea {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#orderForm textarea {
+    height: 80px;
+}
+
+#orderForm button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    clear: both;
+}
+
+#orderForm button[type="submit"]:hover {
+    background-color: #45a049;
+}
